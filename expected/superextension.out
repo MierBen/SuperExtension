@@ -1,0 +1,25 @@
+-- Register extension
+CREATE EXTENSION superextension;
+-- Call superfunction with selecting returning data
+SELECT * FROM superfunction(16, 'A');
+
+ f1 |        f2        
+----+------------------
+  1 | A
+  2 | AA
+  3 | AAA
+  4 | AAAA
+  5 | AAAAA
+  6 | AAAAAA
+  7 | AAAAAAA
+  8 | AAAAAAAA
+  9 | AAAAAAAAA
+ 10 | AAAAAAAAAA
+ 11 | AAAAAAAAAAA
+ 12 | AAAAAAAAAAAA
+ 13 | AAAAAAAAAAAAA
+ 14 | AAAAAAAAAAAAAA
+ 15 | AAAAAAAAAAAAAAA
+ 16 | AAAAAAAAAAAAAAAA
+ (16 rows)
+
