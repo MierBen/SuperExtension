@@ -1,8 +1,5 @@
--- Register extension
 CREATE EXTENSION superextension;
--- Call superfunction with selecting returning data
 SELECT * FROM superfunction(16, 'A');
-
  f1 |        f2        
 ----+------------------
   1 | A
@@ -21,5 +18,5 @@ SELECT * FROM superfunction(16, 'A');
  14 | AAAAAAAAAAAAAA
  15 | AAAAAAAAAAAAAAA
  16 | AAAAAAAAAAAAAAAA
- (16 rows)
+(16 rows)
 

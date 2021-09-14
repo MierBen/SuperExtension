@@ -16,6 +16,7 @@ PG_FUNCTION_INFO_V1(superfunction);
  */
 void create_aaa_string(size_t counter, char *str);
 
+size_t count_digits(size_t number); 
 
 /**
  * @brief Функция, возвращающая повторяющееся значение A от 1..N
@@ -47,7 +48,7 @@ Datum
         // Максимальное значение вызовов равно значению первого аргумента - counter
         funcctx->max_calls = PG_GETARG_UINT32(0);
 
-        /* Build a tuple descriptor for our result type */
+        // 
         if (get_call_result_type(fcinfo, NULL, &tupdesc) != TYPEFUNC_COMPOSITE)
             ereport(ERROR,
                     (errcode(ERRCODE_FEATURE_NOT_SUPPORTED),
@@ -70,24 +71,28 @@ Datum
 
     if (call_cntr < max_calls) // Выполняем до N
     {
-        char **values;
+        char **values = NULL;
         HeapTuple tuple;
         Datum result;
-
         const size_t counter = call_cntr + 1;
+	const size_t digits = count_digits(counter);
+
+//	elog(INFO, "Digits: %u", digits);
+//	elog(INFO, "Counter: %u", counter);
 
         // Подготовка строк для хранения возвращающегося значения
         values = (char **)palloc(2 * sizeof(char *));
-        
-        values[0] = (char *)palloc(3 * sizeof(char));
+
+        values[0] = (char *)palloc((digits + 1) * sizeof(char));
 
         // Выделяем значение под значение + null-byte
-        values[1] = (char *)palloc(counter + 1 * sizeof(char)); 
+        values[1] = (char *)palloc((counter + 1) * sizeof(char)); 
 
-        snprintf(values[0], 3, "%ld", counter);
+        snprintf(values[0], digits + 1, "%u", counter);
 
         // Обнуляем содержимое
-        memset(values[1], 0, sizeof(counter * sizeof(char)) );
+        memset(values[1], 0, sizeof((counter + 1) * sizeof(char)) );
+	// 
         create_aaa_string(counter, values[1]);
 
         // Создаем кортеж
@@ -117,6 +122,19 @@ void create_aaa_string(size_t counter, char *str)
 
     for (size_t i = 0; i < counter; i++)
     {
-        strncat(str, "A", 1);
+        strcat(str, "A");
     }
+}
+
+size_t count_digits(size_t number)
+{
+    size_t result = 0;
+
+    while(number)
+    {
+	result++;
+        number = number / 10;
+    }
+
+    return result;
 }

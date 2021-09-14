@@ -3,8 +3,8 @@ EXTENSION = superextension
 DATA = superextension--1.0.sql
 REGRESS = superextension
 
-BIN_PATH = $(HOME)/tmp_pgsql/bin
+BUILD_PATH = /tmp/tmp_pgsql
 
-PG_CONFIG = $(BIN_PATH)/pg_config
+PG_CONFIG = $(BUILD_PATH)/bin/pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)

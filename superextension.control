@@ -1,4 +1,4 @@
 comment = 'Super Function extension'
 default_version = '1.0'
 module_pathname = '$libdir/superextension'
-relocatable = false
+relocatable = true

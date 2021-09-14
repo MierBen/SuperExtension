@@ -1,2 +1,2 @@
 CREATE EXTENSION superextension;
-SELECT * FROM superfunction(100, 'A');
+SELECT * FROM superfunction(16, 'A');
