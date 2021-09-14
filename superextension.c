@@ -16,6 +16,12 @@ PG_FUNCTION_INFO_V1(superfunction);
  */
 void create_aaa_string(size_t counter, char *str);
 
+/**
+ * @brief Возвращает количество символов в числе
+ * 
+ * @param number - Целевое число
+ * @return size_t - количество цифр
+ */
 size_t count_digits(size_t number); 
 
 /**
@@ -76,9 +82,6 @@ Datum
         Datum result;
         const size_t counter = call_cntr + 1;
 	const size_t digits = count_digits(counter);
-
-//	elog(INFO, "Digits: %u", digits);
-//	elog(INFO, "Counter: %u", counter);
 
         // Подготовка строк для хранения возвращающегося значения
         values = (char **)palloc(2 * sizeof(char *));
