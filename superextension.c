@@ -1,8 +1,6 @@
 
-#include "postgres.h"
-#include "fmgr.h"
-#include "funcapi.h"
-#include "utils/builtins.h"
+#include <postgres.h>
+#include <funcapi.h>
 
 PG_MODULE_MAGIC;
 
@@ -100,6 +98,8 @@ Datum
 
         // Создаем кортеж
         tuple = BuildTupleFromCStrings(attinmeta, values);
+
+	elog(LOG, " %s | %s ", values[0], values[1]);
 
         // Преобразование tuple в Datum
         result = HeapTupleGetDatum(tuple);

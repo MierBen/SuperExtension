@@ -1,0 +1,96 @@
+2021-09-14 13:03:49.114 MSK [5588] LOG:  starting PostgreSQL 15devel on x86_64-w64-mingw32, compiled by gcc.exe (Rev5, Built by MSYS2 project) 10.3.0, 64-bit
+2021-09-14 13:03:49.118 MSK [5588] LOG:  listening on IPv6 address "::1", port 5432
+2021-09-14 13:03:49.118 MSK [5588] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2021-09-14 13:03:49.168 MSK [4580] LOG:  database system was shut down at 2021-09-14 13:03:41 MSK
+2021-09-14 13:03:49.176 MSK [5588] LOG:  database system is ready to accept connections
+2021-09-14 13:04:39.388 MSK [1036] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 16:10:18.717 MSK [5964] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 16:27:27.375 MSK [5456] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:27:27.375 MSK [5456] STATEMENT:  SELECT * FROM superfunction(100, 'A');
+2021-09-14 16:28:04.529 MSK [5996] ERROR:  column "A" does not exist at character 33
+2021-09-14 16:28:04.529 MSK [5996] STATEMENT:  select * from superfunction(10, "A");
+2021-09-14 16:28:10.658 MSK [5996] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:28:10.658 MSK [5996] STATEMENT:  select * from superfunction(10,'A');
+2021-09-14 16:28:15.154 MSK [5996] ERROR:  column "A" does not exist at character 32
+2021-09-14 16:28:15.154 MSK [5996] STATEMENT:  select * from superfunction(10,"A");
+2021-09-14 16:28:44.330 MSK [5996] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:28:44.330 MSK [5996] STATEMENT:  select * from superfunction(10,'A');
+2021-09-14 16:28:48.522 MSK [5996] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:28:48.522 MSK [5996] STATEMENT:  select * from superfunction(10, 'A');
+2021-09-14 16:29:17.507 MSK [5996] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:29:17.507 MSK [5996] STATEMENT:  SELECT * FROM superfunction(10, 'A');
+2021-09-14 16:35:07.552 MSK [5004] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:35:07.552 MSK [5004] STATEMENT:  SELECT * FROM superfunction(100, 'A');
+2021-09-14 16:35:59.545 MSK [252] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:35:59.545 MSK [252] STATEMENT:  SELECT * FROM superfunction(100, 'A');
+2021-09-14 16:36:44.891 MSK [5812] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:36:44.891 MSK [5812] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 16:37:13.066 MSK [5620] ERROR:  column "A" does not exist at character 32
+2021-09-14 16:37:13.066 MSK [5620] STATEMENT:  select * from superfunction(10,"A");
+2021-09-14 16:37:53.747 MSK [3500] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:37:53.747 MSK [3500] STATEMENT:  SELECT * FROM superfunction(10, 'A');
+2021-09-14 16:42:17.093 MSK [5328] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:42:17.093 MSK [5328] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 16:42:32.649 MSK [4592] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:42:32.649 MSK [4592] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 16:42:35.813 MSK [2792] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:42:35.813 MSK [2792] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 16:43:25.286 MSK [1868] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:43:25.286 MSK [1868] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 16:49:07.365 MSK [3500] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:49:07.365 MSK [3500] STATEMENT:  SELECT * FROM superfunction(10, 'A');
+2021-09-14 16:50:21.026 MSK [5292] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:50:21.026 MSK [5292] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 16:50:43.582 MSK [3500] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:50:43.582 MSK [3500] STATEMENT:  SELECT * FROM superfunction(10, 'A');
+2021-09-14 16:51:04.210 MSK [5028] ERROR:  syntax error at or near "q" at character 1
+2021-09-14 16:51:04.210 MSK [5028] STATEMENT:  q
+	SELECT * FROM superfunction(10, 'A');
+2021-09-14 16:51:07.615 MSK [5028] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:51:07.615 MSK [5028] STATEMENT:  SELECT * FROM superfunction(10, 'A');
+2021-09-14 16:55:12.240 MSK [3844] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:55:12.240 MSK [3844] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 16:55:25.277 MSK [2792] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:55:25.277 MSK [2792] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 16:57:13.173 MSK [5148] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 16:57:13.173 MSK [5148] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 17:01:19.404 MSK [4288] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 17:01:19.404 MSK [4288] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 17:03:37.096 MSK [4888] ERROR:  invalid input syntax for type integer: ""
+2021-09-14 17:03:37.096 MSK [4888] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-14 17:08:05.294 MSK [4248] ERROR:  extension "superextension" already exists
+2021-09-14 17:08:05.294 MSK [4248] STATEMENT:  create extension superextension;
+2021-09-15 09:17:06.054 MSK [196] LOG:   1 | A 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   2 | AA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   3 | AAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   4 | AAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   5 | AAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   6 | AAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   7 | AAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   8 | AAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   9 | AAAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   10 | AAAAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   11 | AAAAAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   12 | AAAAAAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   13 | AAAAAAAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   14 | AAAAAAAAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   15 | AAAAAAAAAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
+2021-09-15 09:17:06.054 MSK [196] LOG:   16 | AAAAAAAAAAAAAAAA 
+2021-09-15 09:17:06.054 MSK [196] STATEMENT:  SELECT * FROM superfunction(16, 'A');
